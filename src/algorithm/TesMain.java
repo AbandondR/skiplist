@@ -4,6 +4,7 @@ import java.util.Random;
 
 /**
  * {@link SkipList} function test
+ *
  * @author Yu
  * @since 2020/4/1
  */
@@ -12,7 +13,7 @@ public class TesMain {
     public static void main(String[] args) {
         SkipList skipList = new SkipList();
         Random random = new Random();
-        for(int i=0; i<100000; i++) {
+        for (int i = 0; i < 100000; i++) {
             int num = random.nextInt();
             skipList.insert(num, String.valueOf(num));
         }
@@ -31,7 +32,7 @@ public class TesMain {
         SkipList.Node node = skipList.search(Integer.MIN_VALUE + 100020);
         System.out.println(node);
         long end = System.currentTimeMillis();
-        System.out.println("spent time:" + (end-start) + "(ms)" );
+        System.out.println("spent time:" + (end - start) + "(ms)");
     }
 
 }
